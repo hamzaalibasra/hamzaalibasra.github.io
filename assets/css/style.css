@@ -66,7 +66,7 @@ img{max-width:100%}
 .head-in{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:18px}
 .brand{display:flex;align-items:center;color:var(--ink);flex:none}
 .brand:hover{color:var(--ink)}
-.brand-logo{width:46px;height:46px;object-fit:cover;border-radius:10px;flex:none;display:block;background:var(--bg);box-shadow:0 4px 14px rgba(138,109,31,.14)}
+.brand-logo{width:46px;height:46px;object-fit:contain;border-radius:10px;flex:none;display:block}
 .main-nav{display:flex;gap:26px;align-items:center}
 .main-nav a{color:var(--ink-soft);font-size:15.5px;font-weight:500;padding:8px 2px}
 .main-nav a:hover{color:var(--gold-dark)}
@@ -359,7 +359,7 @@ time{color:var(--muted);font-size:13.5px}
 /* footer: clean ivory */
 .site-footer{background:var(--bg);border-top:1px solid var(--line);margin-top:0}
 .foot-grid{display:grid;gap:30px;padding-top:46px;padding-bottom:8px}
-.foot-logo{width:72px;height:72px;object-fit:cover;border-radius:14px;display:block;margin-bottom:12px;background:var(--bg);box-shadow:0 6px 18px rgba(138,109,31,.14)}
+.foot-logo{width:72px;height:72px;object-fit:contain;border-radius:14px;display:block;margin-bottom:12px}
 .foot-name{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:2.5px;color:var(--ink)}
 .foot-tag{color:var(--gold-dark);margin-top:5px;font-size:14.5px;letter-spacing:.6px}
 .foot-blurb{color:var(--muted);font-size:15px;margin-top:12px;max-width:340px}
