@@ -1,7 +1,7 @@
 /* Hamza Ali Basra — LIGHT PREMIUM: white/ivory + metallic gold + charcoal */
 :root{
-  --bg:#fffdf7;
-  --bg-soft:#faf5e9;
+  --bg:#ffffff;
+  --bg-soft:#fcfcfd;
   --card:#ffffff;
   --ink:#22252c;
   --ink-soft:#3a3e47;
@@ -10,8 +10,8 @@
   --gold-dark:#93731a;
   --gold-soft:#e6c96a;
   --gold-pale:#f6ead0;
-  --line:#e9dcba;
-  --line-soft:#f1e8cf;
+  --line:#e7dbb8;
+  --line-soft:#f2ecda;
   --radius:18px;
   --top-h:110px;
   --shadow:0 12px 34px rgba(147,115,26,.08);
@@ -59,16 +59,13 @@ img{max-width:100%}
 .announce-arrow{flex:none;font-weight:700}
 .site-header{
   position:relative;
-  background:rgba(255,253,247,.97);
+  background:rgba(255,255,255,.97);
   border-bottom:1px solid var(--line);
 }
 .head-in{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:18px}
-.brand{display:flex;align-items:center;gap:12px;color:var(--ink);flex:none}
+.brand{display:flex;align-items:center;color:var(--ink);flex:none}
 .brand:hover{color:var(--ink)}
-.brand-logo{width:46px;height:46px;flex:none;display:block}
-.brand-text{display:flex;flex-direction:column;line-height:1.1}
-.brand-name{font-family:var(--display);font-size:19px;font-weight:600;letter-spacing:2.5px;color:var(--ink);white-space:nowrap}
-.brand-sub{font-family:var(--display);font-size:10.5px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold-dark)}
+.brand-logo{height:52px;width:auto;flex:none;display:block}
 .main-nav{display:flex;gap:26px;align-items:center}
 .main-nav a{color:var(--ink-soft);font-size:15.5px;font-weight:500;padding:8px 2px}
 .main-nav a:hover{color:var(--gold-dark)}
@@ -88,7 +85,7 @@ img{max-width:100%}
 /* ---------- hero: white, huge charcoal name, arch portrait ---------- */
 .hero{
   position:relative;overflow:hidden;
-  background:linear-gradient(180deg,#fffdf7 0%,#fffaf0 78%,#fdf6e3 100%);
+  background:radial-gradient(880px 480px at 82% -8%,rgba(201,162,39,.09),rgba(201,162,39,0) 62%),#fff;
   border-bottom:1px solid var(--line-soft);
 }
 .hero-in{
@@ -132,6 +129,32 @@ img{max-width:100%}
   font-family:var(--display);letter-spacing:2px;text-transform:uppercase;
   font-size:12.5px;color:var(--gold-dark);
 }
+
+/* card + post images (image first, text below) */
+.card-img-link{display:block;margin:-26px -26px 20px;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden}
+.card-img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.lead-card .card-img-link{margin:-32px -32px 22px}
+.post-feature{
+  width:100%;aspect-ratio:16/10;object-fit:cover;display:block;
+  border-radius:18px;border:1.5px solid var(--gold);
+  box-shadow:0 20px 42px rgba(90,72,20,.16);margin:4px 0 20px;
+}
+
+/* homepage identity-network cards (real photos/logos) */
+.network-card{display:flex;flex-direction:column}
+.network-media{
+  height:210px;border-radius:14px;overflow:hidden;margin-bottom:20px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line-soft);background:#fff;
+}
+.network-media.nm-dark{background:#000;border-color:#000}
+.network-media.nm-plain{background:#fff}
+.network-media img.cover{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.network-media img.contain{max-width:72%;max-height:78%;object-fit:contain}
+.network-stat{display:flex;align-items:baseline;gap:9px;margin-top:10px}
+.ns-num{font-family:var(--display);font-size:30px;font-weight:700;color:var(--gold-dark);line-height:1}
+.ns-label{font-size:12.5px;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted)}
+.network-card .card-link{margin-top:auto;padding-top:16px}
 
 /* ---------- slim proof strip ---------- */
 .proof-band{background:#fff;border-bottom:1px solid var(--line-soft)}
@@ -332,9 +355,9 @@ time{color:var(--muted);font-size:13.5px}
 .inquiry-card .card-link{margin-top:auto;padding-top:14px}
 
 /* footer: clean ivory */
-.site-footer{background:#fbf7ec;border-top:1px solid var(--line);margin-top:0}
+.site-footer{background:#fff;border-top:1px solid var(--line);margin-top:0}
 .foot-grid{display:grid;gap:30px;padding-top:46px;padding-bottom:8px}
-.foot-logo{width:64px;height:64px;display:block;margin-bottom:12px}
+.foot-logo{height:74px;width:auto;display:block;margin-bottom:12px}
 .foot-name{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:2.5px;color:var(--ink)}
 .foot-tag{color:var(--gold-dark);margin-top:5px;font-size:14.5px;letter-spacing:.6px}
 .foot-blurb{color:var(--muted);font-size:15px;margin-top:12px;max-width:340px}
