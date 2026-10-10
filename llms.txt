@@ -12,11 +12,11 @@
 
 ## Key pages
 
-- [Home](https://hamzaalibasra.github.io/): Hamza Ali Basra — entrepreneur, founder of Grab AI Tool and ToolPixi.
-- [About](https://hamzaalibasra.github.io/about.html): His story and how he works.
-- [Ventures](https://hamzaalibasra.github.io/ventures.html): The businesses and media he runs.
-- [Daily Insights](https://hamzaalibasra.github.io/insights/): Short original essays on entrepreneurship and business mindset.
-- [Contact](https://hamzaalibasra.github.io/contact.html): Media and business enquiries.
+- [Home](https://hamzaalibasra.com/): Hamza Ali Basra — entrepreneur, founder of Grab AI Tool and ToolPixi.
+- [About](https://hamzaalibasra.com/about.html): His story and how he works.
+- [Ventures](https://hamzaalibasra.com/ventures.html): The businesses and media he runs.
+- [Daily Insights](https://hamzaalibasra.com/insights/): Short original essays on entrepreneurship and business mindset.
+- [Contact](https://hamzaalibasra.com/contact.html): Media and business enquiries.
 
 ## Ventures and profiles
 

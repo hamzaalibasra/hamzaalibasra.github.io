@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hamzaalibasra.github.io/sitemap.xml
+Sitemap: https://hamzaalibasra.com/sitemap.xml
