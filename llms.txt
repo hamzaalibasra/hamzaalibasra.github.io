@@ -20,7 +20,7 @@
 
 ## Ventures and profiles
 
-- [Grab AI Tool](https://grabaitool.github.io/): AI tools directory — tests, reviews, comparisons, tool-finder quiz and cost calculator.
+- [Grab AI Tool](https://grabaitool.com/): AI tools directory — tests, reviews, comparisons, tool-finder quiz and cost calculator.
 - [ToolPixi](https://toolpixi.github.io/): Free online tools that run entirely in your browser.
 - [Facebook page](https://www.facebook.com/hamzaalibasra): His flagship page.
 - [Instagram](https://www.instagram.com/hamzaalibasra)
