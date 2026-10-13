@@ -229,6 +229,8 @@ time{color:var(--muted);font-size:13.5px}
   margin-bottom:16px;
 }
 .venture-photo{width:58px;height:58px;border-radius:16px;object-fit:cover;border:1px solid var(--gold);margin-bottom:16px}
+.venture-logo{width:58px;height:58px;border-radius:16px;object-fit:cover;margin-bottom:16px}
+.venture-logo.logo-dark{background:#0d0d0f;object-fit:contain;padding:6px;border:1px solid var(--gold)}
 .venture-card{display:flex;flex-direction:column}
 .venture-card .card-link{margin-top:auto;padding-top:14px}
 
