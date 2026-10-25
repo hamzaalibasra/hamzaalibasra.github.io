@@ -421,3 +421,45 @@ time{color:var(--muted);font-size:13.5px}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
 }
+
+/* ---------- book: The Self-Made Code (black + gold band) ---------- */
+.band-book{
+  background:radial-gradient(900px 480px at 12% 0%,rgba(201,162,39,.18),rgba(201,162,39,0) 60%),#12100b;
+  border-top:1px solid #2a2313;border-bottom:1px solid #2a2313;
+  color:#f5efdd;
+}
+.book-in{display:grid;gap:36px;align-items:center;padding-top:64px;padding-bottom:64px}
+.book-cover-wrap{justify-self:center;max-width:340px;width:100%}
+.book-cover{
+  display:block;width:100%;height:auto;aspect-ratio:5/8;object-fit:cover;
+  border-radius:10px;border:1.5px solid var(--gold);
+  box-shadow:0 30px 60px rgba(0,0,0,.55);
+}
+.band-book .eyebrow{color:var(--gold-soft)}
+.book-title{font-size:clamp(34px,4.6vw,52px);color:#faf5e4}
+.book-sub{
+  font-family:var(--serif);font-style:italic;color:var(--gold-soft);
+  font-size:19px;margin-top:10px;line-height:1.45;
+}
+.book-copy{color:#ddd5bf;margin-top:18px;font-size:17.5px;max-width:600px}
+.book-copy strong{color:#fff}
+.book-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.book-btns-stack{flex-direction:column;align-items:stretch;text-align:center}
+.band-book .btn-ghost{background:transparent;border-color:var(--gold);color:#f3e5bd}
+.band-book .btn-ghost:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+.book-note{margin-top:16px;font-size:14px;color:#b3a888}
+.book-note-dark{margin-top:16px;font-size:14px;color:var(--muted);text-align:center}
+.book-more{
+  display:inline-block;margin-top:10px;font-weight:600;font-size:15.5px;
+  color:var(--gold-soft);
+}
+.book-more:hover{color:#fff}
+.book-page-in{display:grid;gap:36px;align-items:start}
+.book-page-in .book-cover{box-shadow:0 26px 54px rgba(90,72,20,.28)}
+.book-desc p{color:var(--ink-soft);margin-bottom:16px;font-size:17.5px}
+.book-desc ul{margin:0 0 18px 22px;color:var(--ink-soft);font-size:17px}
+.book-desc li{margin-bottom:9px}
+@media(min-width:760px){
+  .book-in{grid-template-columns:340px 1fr}
+  .book-page-in{grid-template-columns:340px 1fr}
+}
