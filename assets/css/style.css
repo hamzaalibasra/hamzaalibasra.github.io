@@ -469,3 +469,14 @@ time{color:var(--muted);font-size:13.5px}
   .book-in{grid-template-columns:340px 1fr}
   .book-page-in{grid-template-columns:340px 1fr}
 }
+
+/* ---------- press: Featured In band ---------- */
+.band-press{background:var(--bg-soft);text-align:center}
+.press-in{padding-top:56px;padding-bottom:56px}
+.press-name{font-size:clamp(30px,4vw,44px)}
+.press-title{
+  font-family:var(--serif);font-style:italic;color:var(--ink-soft);
+  font-size:19px;margin-top:12px;line-height:1.45;
+}
+.press-note{color:var(--muted);margin:14px auto 0;max-width:640px;font-size:16.5px}
+.band-press .card-link{margin-top:18px}
