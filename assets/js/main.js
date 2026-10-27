@@ -38,3 +38,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Scroll reveal — progressive enhancement only. The CSS hides .reveal
+  // elements solely under html.js; if anything here fails, reveal all.
+  var els = document.querySelectorAll(".reveal");
+  if (els.length) {
+    var reduce = window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) {
+      els.forEach(function (el) { el.classList.add("in"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: "0px 0px -5% 0px" });
+      els.forEach(function (el) { io.observe(el); });
+    }
+  }
+
+  // Newsletter form fallback: until a form endpoint is configured, the
+  // submit opens the visitor's mail app with the subscribe request and
+  // their typed address — the same flow the site has always used.
+  document.querySelectorAll("form.news-form[data-mailto]").forEach(function (f) {
+    f.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var input = f.querySelector("input[type=email]");
+      var email = input ? input.value : "";
+      var addr = f.getAttribute("data-mailto");
+      var subject = encodeURIComponent("Subscribe to Daily Insights");
+      var body = encodeURIComponent(
+        "Please subscribe me to Daily Insights.\n\nMy email: " + email);
+      window.location.href =
+        "mailto:" + addr + "?subject=" + subject + "&body=" + body;
+    });
+  });
+});
