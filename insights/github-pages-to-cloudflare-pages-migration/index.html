@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="Ff87DKtPQsCeYcZV_4erQb7DS9Pn3wR8OsRSAquNFwc">
+<meta name="p:domain_verify" content="3df2cbe6a2afc340b8381aa35d4ff716">
+<title>How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It — Hamza Ali Basra</title>
+<meta name="description" content="I moved my newest site from GitHub Pages to Cloudflare Pages in a day. Here is the exact sequence that worked — including the step that failed first and the twelve-hour wait nobody warns you about.">
+<link rel="canonical" href="https://hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">
+<meta property="og:title" content="How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It — Hamza Ali Basra">
+<meta property="og:description" content="I moved my newest site from GitHub Pages to Cloudflare Pages in a day. Here is the exact sequence that worked — including the step that failed first and the twelve-hour wait nobody warns you about.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Hamza Ali Basra">
+<meta property="og:url" content="https://hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">
+<meta property="og:image" content="https://hamzaalibasra.com/assets/posts/github-pages-to-cloudflare-pages.jpg">
+<meta property="article:published_time" content="2026-11-13">
+<meta property="article:author" content="https://hamzaalibasra.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hamzaalibasra">
+<meta name="twitter:creator" content="@hamzaalibasra">
+<meta name="twitter:title" content="How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It — Hamza Ali Basra">
+<meta name="twitter:description" content="I moved my newest site from GitHub Pages to Cloudflare Pages in a day. Here is the exact sequence that worked — including the step that failed first and the twelve-hour wait nobody warns you about.">
+<meta name="twitter:image" content="https://hamzaalibasra.com/assets/posts/github-pages-to-cloudflare-pages.jpg">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../assets/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="icon" href="../../assets/favicon-96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="../../assets/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261028c">
+<script>document.documentElement.classList.add("js")</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It",
+  "description": "I moved my newest site from GitHub Pages to Cloudflare Pages in a day. Here is the exact sequence that worked — including the step that failed first and the twelve-hour wait nobody warns you about.",
+  "datePublished": "2026-11-13",
+  "author": {
+    "@type": "Person",
+    "name": "Hamza Ali Basra",
+    "url": "https://hamzaalibasra.com/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Hamza Ali Basra",
+    "url": "https://hamzaalibasra.com/"
+  },
+  "image": "https://hamzaalibasra.com/assets/posts/github-pages-to-cloudflare-pages.jpg",
+  "mainEntityOfPage": "https://hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://hamzaalibasra.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://hamzaalibasra.com/insights/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It",
+      "item": "https://hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="topbar">
+<div class="announce">
+  <a class="announce-in" href="../../insights/github-pages-to-cloudflare-pages-migration/">
+    <span class="announce-tag">New Insight</span>
+    <span class="announce-title">How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It</span>
+    <span class="announce-arrow">Read &rarr;</span>
+  </a>
+</div>
+<header class="site-header">
+  <div class="wrap head-in">
+    <a class="brand" href="../../index.html" aria-label="Hamza Ali Basra — home">
+      <img class="brand-logo" src="../../assets/logo-main.png" alt="Hamza Ali Basra" width="512" height="512">
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="../../index.html">Home</a><a href="../../about.html">About</a><a href="../../ventures.html">Ventures</a><a href="../../insights/">Insights</a><a href="../../media.html">Media</a><a href="../../contact.html">Contact</a>
+      <a class="nav-cta" href="../../work-with-me.html">Work With Me</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+</div>
+<main>
+
+<article class="wrap post">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span class="crumb-sep-join"><a href="../../insights/">Insights</a><span class="crumb-sep-join"><span aria-current="page">How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It</span></nav>
+  <p class="card-meta"><a class="chip" href="../../insights/#cat-business">Business</a>
+  <time datetime="2026-11-13">Nov 13, 2026</time></p>
+  <h1>How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It</h1>
+  <p class="post-excerpt">I moved my newest site from GitHub Pages to Cloudflare Pages in a day. Here is the exact sequence that worked — including the step that failed first and the twelve-hour wait nobody warns you about.</p>
+  <img class="post-feature" src="../../assets/posts/github-pages-to-cloudflare-pages.jpg" alt="How to Move a Website from GitHub Pages to Cloudflare Pages — Without Breaking It" width="1200" height="800">
+  <div class="share-row" role="group" aria-label="Share">
+  <span class="share-label">Share this insight</span>
+  <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=How%20to%20Move%20a%20Website%20from%20GitHub%20Pages%20to%20Cloudflare%20Pages%20%E2%80%94%20Without%20Breaking%20It%20%E2%80%94%20Hamza%20Ali%20Basra&url=https%3A//hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">Share on X</a>
+  <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">Facebook</a>
+  <a class="share-btn" target="_blank" rel="noopener" href="https://wa.me/?text=How%20to%20Move%20a%20Website%20from%20GitHub%20Pages%20to%20Cloudflare%20Pages%20%E2%80%94%20Without%20Breaking%20It%20%E2%80%94%20Hamza%20Ali%20Basra%20https%3A//hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">WhatsApp</a>
+  <a class="share-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">LinkedIn</a>
+  <button type="button" class="share-btn copy-btn" data-copy="https://hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">Copy Link</button>
+</div>
+  <p>If your website lives on GitHub Pages and it works, leave it alone. That is the first honest thing to say in a guide about moving away from it. GitHub Pages is free, it is reliable, and for a simple static site it asks almost nothing of you. Three of my sites still live there, including this one. But there comes a point where you need things GitHub Pages does not give you: proper redirect rules, control over headers, preview deployments, and a global edge network with security tools in front of it. That is when a move makes sense — and when it is worth doing carefully, because a migration done badly is how a working site goes dark on its best day.</p><p>I made this exact move in November 2026 with my fourth website, MythPost, a news and stories site I built in a single day. Forty-two articles, fifty-seven pages, one hundred sixty-one files. It went live on Cloudflare Pages the same evening, and the custom domain followed the next morning. Nothing broke, no page went missing, and search traffic never noticed the change. This guide is the sequence I actually used, including the step that failed on the first try and the long wait in the middle that nobody warns you about.</p><p>Step 1 — Decide why you are moving, in one sentence. Write it down before you touch anything. Mine was simple: I wanted Cloudflare's edge, redirect rules, and DNS in one place for a site that would publish daily and needed to survive traffic spikes. If your reason is only that Cloudflare sounds more serious, stop here. A migration is a small project with real risk, and fashion is not a reason to take it on. If your reason is a real capability you need — redirects, headers, preview links, or tighter security — the work is worth it, and the rest of this guide will get you there.</p><p>Step 2 — Audit the site before you move a single file. Open your built output folder — the finished HTML, CSS, images, and data files, not your source code — and make a list of everything that must survive the move. The files people forget are always the same ones: sitemap.xml, robots.txt, ads.txt if you run ads, the favicon, and any verification files. Check your internal links while you are there. On MythPost I checked every internal link before deploying, not after, because a broken link found after the move is a broken link your visitors already met. Count the files too, so you can confirm the same number lands on the other side. If your count does not match after deploying, stop and find the gap before you touch DNS.</p><p>Step 3 — Set up Cloudflare access the right way, once. Create your Cloudflare account and make a scoped API token with Pages and Zone and DNS permissions — only the permissions the job needs, nothing more. Store that token in a password manager or a proper secret store. Never paste it into a chat message, never commit it to a repository, and never email it to yourself. Sign in to the Cloudflare dashboard with Sign in with Google, not with a password you will forget or reuse. Access is the foundation of this whole move: if the token is loose, the site is loose, and no amount of careful deployment fixes that.</p><p>Step 4 — Deploy to the pages.dev address first, and verify it like a stranger. Create the Pages project and deploy your built folder to it — through a connected Git repository or a direct upload, whichever your workflow supports. You will get a yoursite.pages.dev address. Open it. Click through the homepage, a category page, and several inner pages. Confirm they return a proper 200 response and that the images and stylesheets actually load. This step is the whole secret of a safe migration: never point your real domain at a deployment you have not already opened with your own eyes. My deployment went up with all one hundred sixty-one files and the homepage, category hubs, and article pages all served correctly on the first check. Only then did I move on to the domain.</p><p>Step 5 — Attach the custom domain and move the nameservers. In Cloudflare, add your domain as a zone and attach it as a custom domain on the Pages project, including the www version, which Cloudflare points at your pages.dev address. Then go to your domain registrar and replace the nameservers with the two Cloudflare nameservers assigned to your zone. This is the step that needs patience. I made the nameserver change on the evening of November 10, and the zone did not go active until 10:59 AM the next morning — about twelve hours later. Nothing was wrong. That is simply how long propagation can take, and it varies by registrar and by region. Plan the move for a quiet day, not launch hour, and do not keep changing settings while you wait. Changing things mid-propagation only restarts the confusion.</p><p>Step 6 — Verify everything again, from scratch, on the real domain. Once the zone is active, open your custom domain in a fresh browser window, not a cached tab. Check the homepage and several inner pages. Check that the www version sends visitors to the main domain instead of showing a second copy of the site. Confirm the HTTPS certificate is active and the padlock shows. Fetch the sitemap, the robots file, and the ads.txt file at their real addresses and confirm each one returns its content, not an error page. If an advertising review is running on any of your sites, this check matters twice as much: a missing ads.txt during a review is a problem you created yourself, for free.</p><p>Step 7 — Tell Google the site has moved house. Open Search Console, resubmit your sitemap on the new host, and request indexing for your most important pages. Make sure your canonical tags point at the custom domain, not at the pages.dev address. Google follows the canonical, so this one line decides which address the search results show. Then leave it alone. Search Console will take its time re-crawling, and refreshing it every hour will not make it faster.</p><p>Now the honest pitfalls section, because the steps above are the clean version and reality is messier. First, my dashboard deploy failed. The Cloudflare dashboard sign-in hit a verification wall and would not let me deploy from the browser at all, so the direct-upload route through the API is what actually shipped the site. Have a second route ready before you start — a git-connected deploy or an API upload — because discovering your only route is blocked at midnight is a bad way to learn it. Second, the CNAME file: GitHub Pages reads a CNAME file in your repository to know your custom domain. Cloudflare ignores it completely. Attach the domain inside the Pages project instead, and do not assume a file you carried over is doing anything. Third, do not plan on redirecting the pages.dev address to your domain. The pages.dev address sits outside your zone, so your own redirect rules cannot catch it. Set your canonicals on the custom domain and stop worrying about the preview address. Fourth, do not delete the old GitHub repository yet. Keep it untouched for at least a week as your fallback. If anything looks wrong on the new host, you can point the domain back in minutes. Fifth, check your caching. Cloudflare caches aggressively by default, which is good for speed and bad for a founder who just fixed a typo and cannot see the fix. Learn where the purge button is before you need it in a hurry.</p><p>A final note on cost, because founders ask first. Cloudflare Pages has a free tier that covers a static site like this comfortably, and the DNS and SSL come with it. I spent nothing on the move itself. What it costs is an evening of careful work and a morning of patience while the nameservers propagate. That is a fair trade for the control you get on the other side — and if you are running the site as a business, control over your own front door is not a luxury. It is the job.</p><p>Done properly, a migration is the most boring success you will ever have. Nobody notices, no visitor writes in to congratulate you, and the site simply keeps working from a stronger foundation. That silence is the result you are aiming for. Move slowly, verify twice, keep the fallback, and let the numbers tell you it worked.</p><p>I run Grab AI Tool, ToolPixi, DailyWallPix, and MythPost — you can explore them from my ventures page, or reach me through the contact page.</p>
+  <div class="share-row" role="group" aria-label="Share">
+  <span class="share-label">Share this insight</span>
+  <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=How%20to%20Move%20a%20Website%20from%20GitHub%20Pages%20to%20Cloudflare%20Pages%20%E2%80%94%20Without%20Breaking%20It%20%E2%80%94%20Hamza%20Ali%20Basra&url=https%3A//hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">Share on X</a>
+  <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">Facebook</a>
+  <a class="share-btn" target="_blank" rel="noopener" href="https://wa.me/?text=How%20to%20Move%20a%20Website%20from%20GitHub%20Pages%20to%20Cloudflare%20Pages%20%E2%80%94%20Without%20Breaking%20It%20%E2%80%94%20Hamza%20Ali%20Basra%20https%3A//hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">WhatsApp</a>
+  <a class="share-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">LinkedIn</a>
+  <button type="button" class="share-btn copy-btn" data-copy="https://hamzaalibasra.com/insights/github-pages-to-cloudflare-pages-migration/">Copy Link</button>
+</div>
+  <div class="post-foot">
+    <img class="mini-photo" src="../../assets/photo.jpg" alt="Hamza Ali Basra" width="510" height="510">
+    <div>
+      <p class="mini-name">Hamza Ali Basra</p>
+      <p class="mini-role">Entrepreneur</p>
+    </div>
+  </div>
+  <div class="follow-band">
+    <p class="follow-title">Follow @hamzaalibasra</p>
+    <p class="follow-copy">Daily motivation, honest business lessons, and the
+    work behind the name — on every platform that matters.</p>
+    <div class="follow-row"><a class="follow-btn" href="https://www.facebook.com/hamzaalibasra" target="_blank" rel="noopener">Follow on Facebook</a><a class="follow-btn" href="https://www.instagram.com/hamzaalibasra" target="_blank" rel="noopener">Follow on Instagram</a><a class="follow-btn" href="https://x.com/hamzaalibasra" target="_blank" rel="noopener">Follow on X</a><a class="follow-btn" href="https://www.tiktok.com/@hamzaalibasra" target="_blank" rel="noopener">Follow on TikTok</a></div>
+  </div>
+  <nav class="pn-nav" aria-label="More insights"><a class="pn-link pn-next" href="../founder-journal-1-a-new-site-in-one-day/"><span class="pn-label">Older insight &rarr;</span><span class="pn-title">Founder Journal #1: A New Site in One Day — and What the Numbers Actually Say</span></a></nav>
+</article>
+<section class="band band-related">
+  <div class="wrap section">
+    <div class="sec-head">
+      <p class="eyebrow">Keep Reading</p>
+      <h2 class="sec-title">Related Insights</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="card post-card reveal">
+  <a class="card-img-link" href="../founder-journal-1-a-new-site-in-one-day/"><img class="card-img" src="../../assets/posts/founder-journal-1.jpg" alt="Founder Journal #1: A New Site in One Day — and What the Numbers Actually Say" width="1200" height="800" loading="lazy"></a>
+  <p class="card-meta"><a class="chip" href="../#cat-business">Business</a>
+  <time datetime="2026-11-11">Nov 11, 2026</time></p>
+  <h3><a href="../founder-journal-1-a-new-site-in-one-day/">Founder Journal #1: A New Site in One Day — and What the Numbers Actually Say</a></h3>
+  <p>Yesterday I launched a fourth website in a single day. Here are the real numbers behind it — the wins, the blocks, and what I am doing next.</p>
+  <a class="card-link" href="../founder-journal-1-a-new-site-in-one-day/">Read more &rarr;</a>
+</article><article class="card post-card reveal">
+  <a class="card-img-link" href="../the-customer-who-left-is-still-talking/"><img class="card-img" src="../../assets/posts/lost-customer.jpg" alt="The Customer Who Left Is Still Talking" width="1200" height="800" loading="lazy"></a>
+  <p class="card-meta"><a class="chip" href="../#cat-business">Business</a>
+  <time datetime="2026-11-08">Nov 8, 2026</time></p>
+  <h3><a href="../the-customer-who-left-is-still-talking/">The Customer Who Left Is Still Talking</a></h3>
+  <p>The customers who teach you the most are the ones who left quietly. Their silence is a diagnosis — if you are willing to read it.</p>
+  <a class="card-link" href="../the-customer-who-left-is-still-talking/">Read more &rarr;</a>
+</article><article class="card post-card reveal">
+  <a class="card-img-link" href="../make-the-offer-obvious/"><img class="card-img" src="../../assets/posts/make-the-offer-obvious.jpg" alt="Make the Offer Obvious" width="1200" height="800" loading="lazy"></a>
+  <p class="card-meta"><a class="chip" href="../#cat-business">Business</a>
+  <time datetime="2026-11-05">Nov 5, 2026</time></p>
+  <h3><a href="../make-the-offer-obvious/">Make the Offer Obvious</a></h3>
+  <p>If a stranger cannot explain what you sell in one sentence, you do not have a marketing problem. You have a clarity problem.</p>
+  <a class="card-link" href="../make-the-offer-obvious/">Read more &rarr;</a>
+</article>
+    </div>
+    <a class="card-link" href="../../insights/">All insights &rarr;</a>
+  </div>
+</section>
+
+<section class="band band-news reveal">
+  <div class="wrap news-in">
+    <div>
+      <p class="eyebrow">Daily Insights</p>
+      <h2 class="band-title">One honest idea, in your inbox.</h2>
+      <p class="band-copy">A short essay on mindset, business, and building a
+      name that lasts — written by Hamza, sent when there is something worth saying.</p>
+    </div>
+    <div class="news-cta">
+      <form class="news-form" method="post" action="https://formspree.io/f/mnppdrbn">
+        <label class="news-label" for="news-email">Get the Daily Insight by email</label>
+        <div class="news-row">
+          <input type="email" id="news-email" name="email" required
+                 placeholder="Your email address" autocomplete="email">
+          <button class="btn btn-gold" type="submit">Subscribe</button>
+        </div>
+      </form>
+      <p class="fine-print">No spam, no noise — ever. Prefer your mail app?
+      <a href="mailto:iamhamzaalibasra@gmail.com?subject=Subscribe%20to%20Daily%20Insights&body=Please%20subscribe%20me%20to%20Daily%20Insights.">Subscribe by email</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-cta reveal">
+  <div class="wrap cta-in">
+    <p class="eyebrow">Work With Hamza</p>
+    <h2 class="cta-title">Have a project, a stage,<br>or a story in mind?</h2>
+    <p class="band-copy">Business inquiries, partnerships, and media, speaking
+    &amp; writing invitations — one inbox, answered personally.</p>
+    <div class="cta-btns">
+      <a class="btn btn-gold" href="../../contact.html">Work With Hamza</a>
+      <a class="btn btn-ghost" href="mailto:iamhamzaalibasra@gmail.com">Email Me</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img class="foot-logo" src="../../assets/logo-main.png" alt="Hamza Ali Basra logo" width="512" height="512">
+      <p class="foot-name">HAMZA ALI BASRA</p>
+      <p class="foot-tag">Entrepreneur</p>
+      <p class="foot-blurb">Building digital brands, honest content, and
+      ventures that last — one kept promise at a time.</p>
+      <div class="socials foot-socials"><a class="soc" href="https://www.facebook.com/hamzaalibasra" target="_blank" rel="noopener">Facebook</a><a class="soc" href="https://www.instagram.com/hamzaalibasra" target="_blank" rel="noopener">Instagram</a><a class="soc" href="https://x.com/hamzaalibasra" target="_blank" rel="noopener">X</a><a class="soc" href="https://www.tiktok.com/@hamzaalibasra" target="_blank" rel="noopener">TikTok</a></div>
+    </div>
+    <nav class="foot-col" aria-label="Explore">
+      <h4>Explore</h4>
+      <a href="../../index.html">Home</a><a href="../../about.html">About</a><a href="../../ventures.html">Ventures</a><a href="../../insights/">Insights</a><a href="../../media.html">Media</a><a href="../../contact.html">Contact</a>
+    </nav>
+    <nav class="foot-col" aria-label="Ventures">
+      <h4>Ventures</h4>
+      <a href="https://www.facebook.com/hamzaalibasra" target="_blank" rel="noopener">Hamza Ali Basra</a><a href="https://www.facebook.com/CEOLegacyOfficial" target="_blank" rel="noopener">CEO LEGACY</a><a href="https://grabaitool.com/" target="_blank" rel="noopener">Grab AI Tool</a><a href="https://toolpixi.com/" target="_blank" rel="noopener">ToolPixi</a>
+    </nav>
+    <div class="foot-col">
+      <h4>Connect</h4>
+      <a href="mailto:iamhamzaalibasra@gmail.com">iamhamzaalibasra@gmail.com</a>
+      <a href="https://www.instagram.com/hamzaalibasra" target="_blank" rel="noopener">Instagram — @hamzaalibasra</a>
+      <a href="https://x.com/hamzaalibasra" target="_blank" rel="noopener">X — @hamzaalibasra</a>
+      <a href="https://www.tiktok.com/@hamzaalibasra" target="_blank" rel="noopener">TikTok — @hamzaalibasra</a>
+    </div>
+  </div>
+  <div class="wrap foot-fine">
+    <p>© 2026 Hamza Ali Basra · All rights reserved.</p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
