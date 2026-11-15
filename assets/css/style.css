@@ -665,3 +665,63 @@ html.js .reveal.in{opacity:1;transform:none}
   .price-amt{font-size:40px}
   .price-btn{min-height:50px;display:flex;align-items:center;justify-content:center}
 }
+
+/* ---------- growth sections 2026-11-15: quotes, guides, numbers, resources ---------- */
+
+/* nav now carries ten links + CTA — tighten the wide-screen spacing */
+@media(min-width:1181px){
+  .main-nav{gap:18px}
+  .main-nav a{font-size:14.5px}
+}
+
+/* quotes library */
+.quote-card{margin:0;display:flex;flex-direction:column}
+.quote-card .quote-mark{font-size:44px;margin-bottom:10px}
+.quote-card blockquote{
+  font-family:var(--serif);font-style:italic;font-weight:700;
+  font-size:20.5px;line-height:1.45;color:var(--ink);
+}
+.quote-card figcaption{
+  margin-top:16px;font-family:var(--display);letter-spacing:2px;
+  text-transform:uppercase;font-size:12px;color:var(--gold-dark);
+}
+.topic-intro{padding-bottom:0}
+.topic-sample{
+  font-family:var(--serif);font-style:italic;color:var(--ink-soft)!important;
+  font-size:17.5px!important;margin-top:4px;
+}
+.topic-card,.guide-card,.res-card,.explore-card{display:flex;flex-direction:column}
+.topic-card .card-link,.guide-card .card-link,.res-card .card-link,.explore-card .card-link{margin-top:auto;padding-top:14px}
+.topic-foot{padding-top:0}
+.topic-links{display:flex;gap:26px;flex-wrap:wrap;margin-top:6px}
+.topic-links .card-link{margin-top:8px}
+
+/* numbers dashboard */
+.num-brand{
+  font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#8fa0bd;
+}
+.num-proof .stat{gap:5px}
+@media(min-width:760px){
+  .num-proof{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
+.num-table th{width:230px}
+.num-press{color:var(--ink-soft);font-size:17px;margin-bottom:12px}
+.num-press strong{color:var(--gold-dark)}
+
+/* resources checklists */
+.check-head{font-size:24px;margin:30px 0 6px}
+.check-list{list-style:none;margin:10px 0 8px}
+.check-list li{
+  position:relative;padding:9px 0 9px 34px;color:var(--ink-soft);
+  font-size:17.5px;border-bottom:1px dashed var(--line-soft);
+}
+.check-list li:last-child{border-bottom:none}
+.check-list li::before{
+  content:"\2713";position:absolute;left:2px;top:9px;
+  color:var(--gold-dark);font-weight:700;font-size:18px;
+}
+
+/* work-with-me consulting cards */
+.consult-title{font-size:23px;text-align:center;margin-top:6px}
+.consult-desc{text-align:center;margin-top:8px}
+.card .consult-title{color:var(--ink)}
